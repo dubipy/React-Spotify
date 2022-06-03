@@ -280,9 +280,29 @@ body a:hover {
   cursor: pointer;
 }
 .playing__add {
-  margin-left: auto;
+  margin-left: 20px;
   padding-right: 15px;
   color: #aaaaaa;
+}
+
+.playing__add:hover {
+  color: tomato;
+  animation: HeartUp 2s infinite linear;
+}
+
+@keyframes HeartUp {
+
+  0% {
+    transform: scale(1, 1)
+
+  }
+  50% {
+    transform: scale(1.5, 1.5)
+  }
+  100% {
+    transform: scale(1, 1)
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -290,43 +310,79 @@ body a:hover {
     border-top: 1px solid #181818;
   }
 }
+
 .current-track {
+  display: flex;
   background: #282828;
+  justify-content: center;
   padding: 5px 15px;
+  position: sticky;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
+
+.current-track__column {
+  width: 33%;
+  margin: 0px 5px;
+}
+
+.current-track__column {
+  margin: 7px 0px 5px 2px;
+}
+
+.current-track__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.current-track__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .current-track__actions {
-  width: 5%;
+  width: 10%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 .current-track__actions a {
   font-size: 24px;
   color: #c8c8c8;
+  margin: 0px 25px;
 }
+
+.current-track__actions i {
+  font-size: 20px;
+  color: #c8c8c8;
+}
+
 .current-track__actions a:hover {
   color: white;
   cursor: pointer;
 }
-.current-track__actions .play {
+.current-track__actions .fa-circle-play {
   font-size: 36px;
 }
 .current-track__progress {
-  width: 70%;
+  width: 100%;
   padding: 0 30px;
   color: #aaaaaa;
   font-size: 11px;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  
 }
+
 .current-track__progress__bar {
-  width: 100%;
+  width: 50vh;
   padding: 0 15px;
 }
 .current-track__progress__bar .noUi-target {
@@ -356,43 +412,30 @@ body a:hover {
   display: block;
 }
 .current-track__options {
-  width: 25%;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-}
-.current-track__options .lyrics {
-  font-size: 11px;
-  text-transform: uppercase;
-  width: 15%;
-  padding: 0 15px 0 0;
+  justify-content: right;
 }
 .current-track__options .controls {
-  width: 85%;
+  width: 50%;
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
 }
-.current-track__options .controls .devices:hover {
-  text-decoration: none;
-}
-.current-track__options .controls .devices i {
-  margin-right: 5px;
-}
-.current-track__options .controls .devices span {
-  font-size: 11px;
-  text-transform: uppercase;
-}
 .current-track__options .controls .volume {
-  width: 25%;
+  width: 70%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
+
+
 .current-track__options .controls .volume i {
   width: 20px;
   color: #aaaaaa;
+  font-size: 15px;
 }
+
 .current-track__options .controls .volume #song-volume {
   width: calc( 80% - 20px );
   border: none;
@@ -769,39 +812,24 @@ body a:hover {
 }
 .tracks .track {
   border-top: 1px solid #282828;
+  padding: 20px 0px 0px 0px;
   height: 42px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-}
-.tracks .track:hover {
-  background: #282828;
-}
-.tracks .track:last-child {
-  border-bottom: 1px solid #282828;
 }
 .tracks .track__art img {
   width: 42px;
   height: 42px;
 }
 .tracks .track__number {
-  margin-left: 10px;
+  margin: 0px 15px;
   color: #aaaaaa;
   width: 12px;
 }
-.tracks .track__added {
-  margin-left: 30px;
-  color: #c8c8c8;
-}
-.tracks .track__added .added {
-  color: #c8c8c8;
-}
-.tracks .track__added .not-added {
-  color: #aaaaaa;
-}
 .tracks .track__title {
-  width: 45%;
-  margin-left: 30px;
+  width: 30%;
+  margin-left: 7px;
   color: white;
 }
 .tracks .track__title.featured .title:after {
@@ -825,10 +853,8 @@ body a:hover {
   text-decoration: underline;
 }
 .tracks .track__explicit .label {
-  border: 1px;
-  border-style: solid;
-  border-color: #424242;
-  color: #424242;
+  color: rgb(255, 255, 255,.7);
+  font-size: 12px;
   text-transform: uppercase;
 }
 .tracks .track__plays {
