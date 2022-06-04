@@ -5,6 +5,12 @@
 body {
   background: #181818;
   font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none;
+ }
+ 
+::-webkit-scrollbar {
+  display: none;
+}
 }
 body a {
   color: #aaaaaa;
@@ -706,7 +712,7 @@ body a:hover {
 }
 .artist__content .overview__artist {
   padding-right: 15px;
-  width: 70%;
+  width: 100%;
 }
 .artist__content .overview__artist .latest-release {
   margin-bottom: 30px;
@@ -779,6 +785,14 @@ body a:hover {
     text-align: center;
   }
 }
+
+.section-title {
+  border-bottom: 1px solid #282828;
+}
+
+.section-title  {
+  padding: 10px;
+}
 .tracks {
   display: flex;
   flex-flow: column wrap;
@@ -811,7 +825,23 @@ body a:hover {
   padding-right: 10px;
 }
 .tracks .track {
-  border-top: 1px solid #282828;
+  padding: 20px 0px 0px 0px;
+  height: 42px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: #aaaaaa;
+  letter-spacing: 1.25px;
+  font-size: 13.2px;
+  margin-bottom: 10px;
+  
+}
+
+.section-title .section-titles {
   padding: 20px 0px 0px 0px;
   height: 42px;
   display: flex;
@@ -822,8 +852,23 @@ body a:hover {
   width: 42px;
   height: 42px;
 }
-.tracks .track__number {
+
+.section-title .section-title__art {
+  margin-right: 7px;
+}
+
+.tracks .track__number  {
   margin: 0px 15px;
+  color: #aaaaaa;
+  width: 12px;
+}
+
+.track__cloumn {
+  width: 20.8%;
+}
+
+.section-title .section-title__number {
+  margin: 0px 17px 0px 7px;
   color: #aaaaaa;
   width: 12px;
 }
@@ -831,6 +876,10 @@ body a:hover {
   width: 30%;
   margin-left: 7px;
   color: white;
+}
+.section-title .section-title__titles {
+  width: 32.5%;
+  margin-left: 7px;
 }
 .tracks .track__title.featured .title:after {
   content: "-";
@@ -855,11 +904,29 @@ body a:hover {
 .tracks .track__explicit .label {
   color: rgb(255, 255, 255,.7);
   font-size: 12px;
-  text-transform: uppercase;
+}
+
+.section-title .section-title__explicit {
+  color: rgb(255, 255, 255,.7);
+  font-size: 12px;
+  margin-right: 12.5vw;
+}
+
+.section-title .section-title__date {
+  color: rgb(255, 255, 255,.7);
+  font-size: 12px;
+  margin-right: 18vw;
+}
+
+
+.track__date {
+  color: rgb(255, 255, 255,.7);
+  font-size: 12px;
 }
 .tracks .track__plays {
   color: #aaaaaa;
   margin-left: auto;
+  margin-right: 5vw;
   padding-right: 10px;
 }
 .tracks .track__length {
@@ -1205,10 +1272,3 @@ button:hover {
   color: white;
 }
 
-.section-title {
-  text-transform: uppercase;
-  color: #aaaaaa;
-  letter-spacing: 1.25px;
-  font-size: 13.2px;
-  margin-bottom: 10px;
-}

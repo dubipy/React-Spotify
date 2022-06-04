@@ -174,8 +174,6 @@
                         New Playlist
                     </a>
                 </section>
-
-               
             </div>
 
             <div class="content__middle">
@@ -275,36 +273,65 @@
                                         <!-- / -->
 
                                         <!-- Popular-->
-                                        <div class="section-title">앨범</div>
+                                        <div class="section-title">
+                                            <div class="section-titles">
+                                                <div class="section-title__number">#</div>
+                                                <div class="section-title__art">제목</div>
+                                                <div class="section-title__added"></div>
+                                                <div class="section-title__titles"></div>
+                                                <div class="section-title__explicit">앨범</div>
+                                                <div class="section-title__date">추가된 날짜</div>
+                                                <div class="section-title__plays">
+                                                    <i class="fa-solid fa-clock"></i>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="tracks">
                                             <div class="track">
                                                 <div class="track__number">1</div>
+                                                <div class="track__art">
+                                                    <img src="./main-image/1.png" alt="싸다9" />
+                                                </div>
+                                                <div class="track__title">That That (prod. & feat. SUGA of BTS)</div>
+                                                <div class="track__cloumn">
+                                                    <div class="track__explicit">
+                                                        <span class="label">싸다9</span>
+                                                    </div>
+                                                </div>
+                                                <div class="track__cloumn">
+                                                    <div class="track__date">21일 전</div>
+                                                </div>
+                                                <div class="track__cloumn"><div class="track__plays">3:29</div></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tracks">
+                                            <div class="track">
+                                                <div class="track__number">2</div>
 
                                                 <div class="track__art">
-                                                  <img src="./main-image/1.png" alt="싸다9" />
-                                              </div>
-
-                                                <div class="track__added">
-                                                    <i class="ion-checkmark-round added"></i>
+                                                    <img src="./main-image/2.png" alt="싸다9" />
                                                 </div>
 
-                                                <div class="track__title">That That (prod. & feat. SUGA of BTS)</div>
-
-                                                <div class="track__explicit">
-                                                    <span class="label">싸다9</span>
+                                                <div class="track__title">（谷口鮪）×ネクライトーキー（もっさ） - ないものねだり</div>
+                                                <div class="track__cloumn">
+                                                    <div class="track__explicit">
+                                                        <span class="label">KANA-BOON</span>
+                                                    </div>
                                                 </div>
-
-                                                <div class="track__plays">여기엔 노래 날짜 넣을거얌</div>
+                                                <div class="track__cloumn">
+                                                    <div class="track__date">89일 전</div>
+                                                </div>
+                                                <div class="track__cloumn"><div class="track__plays">4:21</div></div>
                                             </div>
-
                                         </div>
 
                                         <!-- <button class="show-more button-light">Show 5 More</button> -->
                                         <!-- / -->
                                     </div>
 
-                                    <div class="overview__related">
+                                    <!-- <div class="overview__related">
                                         <div class="section-title">여기엔 뭐 넣을까 고민 중</div>
 
                                         <div class="related-artists">
@@ -364,7 +391,7 @@
                                                 <span class="related-artist__name">몇이더라..</span>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="overview__albums">
                                         <div class="overview__albums__head">
@@ -812,61 +839,60 @@
 
         <section class="current-track">
             <div class="current-track__column">
-              <section class="playing">
-                <div class="playing__art">
-                    <img src="./music-bar.png" alt="규현 멋있엉" />
-                </div>
+                <section class="playing">
+                    <div class="playing__art">
+                        <img src="./music-bar.png" alt="규현 멋있엉" />
+                    </div>
 
-                <div class="playing__song">
-                    <a class="playing__song__name">깊은 밤을 날아서</a>
+                    <div class="playing__song">
+                        <a class="playing__song__name">깊은 밤을 날아서</a>
 
-                    <a class="playing__song__artist">규현</a>
-                </div>
+                        <a class="playing__song__artist">규현</a>
+                    </div>
 
-                <div class="playing__add">
-                  <i class="fas fa-heart fa-lg"></i>
-                </div>
-            </section>
+                    <div class="playing__add">
+                        <i class="fas fa-heart fa-lg"></i>
+                    </div>
+                </section>
             </div>
             <div class="current-track__column">
                 <div class="current-track__column-flex">
-                  <div class="current-track__actions">
-                    <i class="fa-solid fa-shuffle"></i>
+                    <div class="current-track__actions">
+                        <i class="fa-solid fa-shuffle"></i>
 
-                    <a class="ion-ios-skipbackward"></a>
+                        <a class="ion-ios-skipbackward"></a>
 
-                    <i class="fa-solid fa-circle-play"></i>
+                        <i class="fa-solid fa-circle-play"></i>
 
-                    <a class="ion-ios-skipforward"></a>
+                        <a class="ion-ios-skipforward"></a>
 
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                </div>
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
 
-                <div class="current-track__progress">
-                  <div class="current-track__progress__start">0:01</div>
-    
-                  <div class="current-track__progress__bar">
-                      <div id="song-progress"></div>
-                  </div>
-    
-                  <div class="current-track__progress__finish">3:07</div>
-    
-              </div>
+                    <div class="current-track__progress">
+                        <div class="current-track__progress__start">0:01</div>
+
+                        <div class="current-track__progress__bar">
+                            <div id="song-progress"></div>
+                        </div>
+
+                        <div class="current-track__progress__finish">3:07</div>
+                    </div>
                 </div>
             </div>
             <div class="current-track__column">
                 <div class="current-track__options">
                     <span class="controls">
                         <a href="#" class="control">
-                          <i class="fa-solid fa-music"></i>
+                            <i class="fa-solid fa-music"></i>
                         </a>
 
                         <a href="#" class="control">
-                          <i class="fa-solid fa-inbox"></i>
+                            <i class="fa-solid fa-inbox"></i>
                         </a>
 
                         <a href="#" class="control">
-                          <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
                         </a>
 
                         <a href="#" class="control volume">
